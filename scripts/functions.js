@@ -51,6 +51,5 @@ function get_sentence(){
 }
 function replace_area(a){
 	var div = document.getElementById(a);
-
-div.innerHTML = get_sentence();
+	div.innerHTML = get_sentence();
 }
