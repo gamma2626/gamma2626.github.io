@@ -61,3 +61,7 @@ function replace_tag(a, b, c){
 	var div = document.getElementById(a);
 	div.setAttribute(b,c);
 }
+function replace_content(){
+		replace_text('compliment',get_sentence())
+		replace_tag('image','src','imgs/'+get_img())
+}
