@@ -1,36 +1,51 @@
-sentences = [["You make me feel {adj1}.","Everytime I see you, I feel {adj1}.","I’m glad you’re here. It makes me {adj1}.", "You actually using this site? This is why you make me {adj1}."],
-["You are {adj2}.", "I always knew you were {adj2}.","Did I ever tell you I always thought you were {adj2}?","Your cookies are {adj2}!","Your eyes are {adj2}.","Your face is {adj2}.","Just you entering the room is {adj2}"]]
-
-adj1 = ["happy","great","nice","delighted","overjoyed","at peace"]
-adj2 = ["amazing","awesome","lovely","beautiful","loving","fantastic","pretty","graceful",
+sentences = [
+	[
+		"You make me feel {adj}.",
+		"Everytime I see you, I feel {adj}.",
+		"I’m glad you’re here. It makes me {adj}.",
+		"You actually using this site? This is why you make me {adj}."
+	],
+	[
+		"You are {adj}.",
+		"I always knew you were {adj}.",
+		"Did I ever tell you I always thought you were {adj}?",
+		"Your cookies are {adj}!",
+		"Your eyes are {adj}.",
+		"Your face is {adj}.",
+		"Just you entering the room is {adj}"
+	]
 ]
-function sentenceCount(sent){
-	var count = 0;
-	for(x in sentences){
-		for (y in sentences[x]){
-			count++;
-		}
-	}
-	return count;
-}
-function getSentence(sents, c){
-	var buffer = 0;
-	for (x in sents){
-		if(sents[x].length < (c-buffer)){
-			alert (sents[x] + " : " + c + " : "+ buffer)
-			return sents[x][c-buffer];
-		}
-		buffer+=sents[x].length;
-	}
-}
-function replaceAdj1(sent){
 
-}
+adjs = [
+	[
+		"happy",
+		"great",
+		"nice",
+		"delighted",
+		"overjoyed",
+		"at peace"
+	],
+	[
+		"amazing",
+		"awesome",
+		"lovely",
+		"beautiful",
+		"loving",
+		"fantastic",
+		"pretty",
+		"graceful"
+	]
+]
 
-function getCompliment(){
-	var val = (Math.floor(Math.random()*sentenceCount(sentences)));
-	val = ((val==11)?10:val);
-	// getSentence(sentences, val);
-	// return "End"
-	return getSentence(sentences, val);
+
+function get_sentence(){
+	wadj = Math.floor(Math.random()*2)
+	adj = adjs[wadj][Math.floor(Math.random() * adjs[wadj].length)]
+	sentence = sentences[wadj][Math.floor(Math.random()*sentences[wadj].length)]
+	return sentence.replace("{adj}",adj)
+}
+function replace_area(a){
+	var div = document.getElementById(a);
+
+div.innerHTML = get_sentence();
 }

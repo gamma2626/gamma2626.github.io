@@ -13,18 +13,23 @@
 	<header>
 		<nav id="navmenu">
 			<ul>
-				<li><a href="/">Home</a></li>
+				<li class="selected"><a href="/">Home</a></li>
+				<li><a href="/">More</a></li>
+				<li><a href="/">To</a></li>
+				<li><a href="/">Come</a></li>
 			</ul>
 		</nav>
 	</header>
 	<main role="main">
 		<article class="center space">
 			<h1>Compliment Generator</h1>
+			<p id='compliment'></p>
+			<button onClick="replace_area('compliment')">Reset</button>
 		</article>
 	</main>
 
 <script src="scripts/functions.js"></script>
-<script>alert(getCompliment())</script>
+<script>replace_area('compliment')</script>
 
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 
