@@ -49,7 +49,15 @@ function get_sentence(){
 	sentence = sentences[wadj][Math.floor(Math.random()*sentences[wadj].length)]
 	return sentence.replace("{adj}",adj)
 }
-function replace_area(a){
+function replace_text(a, b){
 	var div = document.getElementById(a);
-	div.innerHTML = get_sentence();
+	div.innerHTML = b;
+}
+
+function get_img(){
+	return Math.floor(Math.random()*9+1).toString()+".jpg"
+}
+function replace_tag(a, b, c){
+	var div = document.getElementById(a);
+	div.setAttribute(b,c);
 }

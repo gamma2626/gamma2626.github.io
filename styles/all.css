@@ -13,6 +13,7 @@ h2 {
 }
 
 article {
+		/* flex:auto; */
     text-align: center;
 }
 .space {
@@ -22,6 +23,12 @@ article p{
     padding-left: 5%;
     padding-right: 5%;
 }
+
+article img{
+	height: 25%;
+	width: 25%
+}
+
 /* Format unorganized list and remove list formatting */
 #navmenu ul{
     background-color: #FF0000;
