@@ -23,7 +23,7 @@ adjs = [
 		"feel nice",
 		"am overjoyed",
 		"am at peace",
-		"feel like my day brightend up",
+		"feel like my day brightened up",
 		"feel butterflies in my stomach",
 		"feel like I can take anything on",
 		"feel myself falling in love"
